@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th = "http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<form>
+		<table>
+			<tr th:each="currentTheater : ${theater}">
+				<td th:text = "${currentTheater.id}" />
+				<td th:text = "${currentTheater.TheaterName}" />
+				<td th:text = "${currentTheater.OpeningTimes}" />
+				<td th:text = "${currentTheater.SnackList}" />
+				<td th:text = "${currentTheater.movie.MovieName}" />
+				<td th:text = "${currentTheater.movie.Rating}" />
+				<td th:text = "${currentTheater.movie.MainCharacter}" />
+   				<td><a th:href="@{/edit/{id}(id=${currentTheater.id})}">Edit</a></td>
+   				<td><a th:href="@{/delete/{id}(id=${currentTheater.id})}">Delete</a></td>
+   			</tr>
+		</table>
+	</form>
+	<a href = "../inputtheater">Add new Theater</a>
+</body>
+</html>

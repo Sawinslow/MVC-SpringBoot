@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th = "http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert new Theater</title>
+</head>
+<body>
+	<form MovieName = 'f' th:object="${newtheater}" th:action="@{/inputtheater}" method='POST'>
+		MovieName:<input name = "movie.MovieName" size = "20"> <br>
+		Rating:<input name = "movie.Rating" size = "10"> <br>
+		Main Character:<input name = "movie.MainCharacter" size = "20"><br>
+		Theater Name:<input name = "TheaterName" size = "20"><br>
+		Opening Times:<input name = "OpeningTimes" size = "20"><br>
+		Snack List:<input name = "SnackList" size = "20"><br>
+		<input name ="submit" type="submit" value ="submit">
+	</form>
+	<a href = "viewAll">View all Theater</a>
+</body>
+</html>

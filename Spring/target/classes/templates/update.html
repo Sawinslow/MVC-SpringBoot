@@ -1,0 +1,39 @@
+
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Update Theater</title>
+</head>
+<body>
+	<form action="#" th:action="@{/update/{id}(id=${theater.id})}" th:object="${theater}" method="post">
+    <label for="TheaterName">TheaterName</label>
+    <input type="text" th:field="*{TheaterName}" id="TheaterName" placeholder="TheaterName">
+    <span th:if="${#fields.hasErrors('TheaterName')}" th:errors="*{TheaterName}"></span>
+    
+    <label for="OpeningTimes">OpeningTimes</label>
+    <input type="text" th:field="*{OpeningTimes}" id="OpeningTimes" placeholder="OpeningTimes">
+    <span th:if="${#fields.hasErrors('OpeningTimes')}" th:errors="*{OpeningTimes}"></span>
+    
+    <label for="SnackList">SnackList</label>
+    <input type="text" th:field="*{SnackList}" id="SnackList" placeholder="SnackList">
+    <span th:if="${#fields.hasErrors('SnackList')}" th:errors="*{SnackList}"></span>
+    
+    <label for="movie.MovieName">MovieName movie</label>
+    <input type="text" th:field="*{movie.MovieName}" id="movie.MovieName" placeholder="MovieName movie">
+    <span th:if="${#fields.hasErrors('movie.MovieName')}" th:errors="*{movie.MovieName}"></span>
+    
+    <label for="movie.Rating">Rating</label>
+    <input type="text" th:field="*{movie.Rating}" id="movie.Rating" placeholder="Rating">
+    <span th:if="${#fields.hasErrors('movie.Rating')}" th:errors="*{movie.Rating}"></span>
+    
+    <label for="movie.MainCharacter">MainCharacter</label>
+    <input type="text" th:field="*{movie.MainCharacter}" id="movie.MainCharacter" placeholder="MainCharacter">
+    <span th:if="${#fields.hasErrors('movie.MainCharacter')}" th:errors="*{movie.MainCharacter}"></span>
+    
+    
+    <input type="submit" value="Update Theater">   
+</form>
+
+</body>
+</html>
+
